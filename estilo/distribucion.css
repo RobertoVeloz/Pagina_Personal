@@ -1,0 +1,150 @@
+body{
+	height: 100%;
+	background-color: white;
+}
+div{
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+#Fondo{
+	position: fixed;
+	height: 100%;
+	left: 0%;
+	width: 100%;
+	top: 0%;
+	overflow-y:scroll;
+	background-color:rgb(6,27,121);
+}
+#Torre{
+	position: fixed;
+	height: 100%;
+	left: 15%;
+	width: 70%;
+	top: 0%;
+	background-image: url(https://p1.pxfuel.com/preview/138/666/393/background-background-image-blue-green.jpg);
+}
+#Fondo_Principal{
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	top: 10%;
+	background-color:rgba(186,198,252,0.5);
+	border-radius: 15px;
+}
+.VACdIO{
+	position: relative;
+	left: 0%;
+	width: 100%;
+	height: 25px;
+	background-color:rgba(255,255,255,0.8);
+	text-align:center;
+}
+.Titulo{
+	
+	position: relative;
+	overflow: hidden;
+	left: 0%;
+	width: 100%;
+	background-color:rgb(10,38,173);
+	text-align:center;
+	border-radius: 10px;
+}
+
+.Titulos{
+
+	position: relative;
+	overflow: hidden;
+	left: 0%;
+	width: 50%;
+	background-color:rgba(10,38,173,0.6);
+	text-align:center;
+	border-radius: 10px;
+}
+.Contenido{
+	position: relative;
+	overflow: hidden;
+	left: 0%;
+	width: 100%;
+	background-color:rgba(255,255,255,0.6);
+	text-align:center;
+	border-radius: 10px;
+	
+}
+
+.mitad_izquierda{
+	
+	position: static;
+	 float: left;
+	left: 5%;
+	width: 40%;
+	border-radius: 5px;
+	
+}
+.mitad_derecha{
+	
+	position: static;
+	 float: left;
+	left: 60%;
+	width: 40%;
+
+	border-radius: 5px;
+}
+.un_tercio{
+	
+	position: relative;
+	
+	left: 5%;
+	width: 30%;
+	border-radius: 15px;
+}
+.dos_tercios{
+	
+	position: relative;
+	left: 40%;
+	width: 65%;
+	border-radius: 15px;
+}
+.Texto{
+	position: relative;
+	overflow: hidden;
+	width: 120%;
+	left: 10%;
+	
+	border-radius: 10px;
+	background-color:white;
+	
+}
+.imagensota{
+	overflow: hidden;
+	width: 30%;
+}
+.immmangen{
+	position: fixed;
+	height: 80%;
+	width: 30%;
+	left: 10%;
+	top: 10%;
+	background-image: url(imagenes/chile3.jpg);
+	background-size: 100% 100%;
+}
+
+h3,p{
+	font-family: Century;
+	color: black;
+	text-indent: 40px;
+	font-size: 16px;
+	text-align : justify;
+}
+
+h1,li{
+	font-family: Century;
+	font-size:40px;
+	color: rgb(255,255,255);
+}
+
+h2{
+	font-family: Century;
+	font-size:30px;
+	color: rgb(255,255,255);
+}
