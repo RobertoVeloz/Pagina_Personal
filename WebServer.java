@@ -1,8 +1,3 @@
-//Desarrollo de Sistemas Distribuidos
-//Proyecto 3
-//Alumno: Roberto Sànchez Veloz
-//Grupo: 4CM11
-//Fecha Abril 2022
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpContext;
 import com.sun.net.httpserver.HttpExchange;
@@ -40,7 +35,6 @@ public class WebServer{
     private static final String TASK_ENDPOINT = "/task";
     private static final String STATUS_ENDPOINT = "/status";
 
-    private String ip;
     private final int port;
     private HttpServer server;
     String url = "https://raw.githubusercontent.com/RobertoVeloz/Pagina_Personal/master/BIBLIA_COMPLETA.txt"; //dirección url del recurso a descargar
@@ -88,37 +82,24 @@ public class WebServer{
         }
 
 
-      
         int serverPort = 8080;
-        if (args.length == 2) {
+        if (args.length == 1) {
             serverPort = Integer.parseInt(args[0]);
         }
-        String serverIP = "127.0.0.53"; //"34.125.187.43"
-        if (args.length == 6) {
-            serverIP = args[0];
-        }
 
-        WebServer webServer = new WebServer(serverIP,serverPort);
+        WebServer webServer = new WebServer(serverPort);
         webServer.startServer();
-        //String AUX="IP";
-        //AUX=WebServer.InetSocketAddress();
-        System.out.println("Servidor escuchando en el puerto " + serverPort+" Con la IP: "+serverIP);
+
+        System.out.println("Servidor escuchando en el puerto " + serverPort);
     }
-	
-    public WebServer(String ip,int port) {
-        this.ip = ip;
+
+    public WebServer(int port) {
         this.port = port;
     }
-    
-    //new InetSocketAddress(String hostname, int port) calls InetAddress.getByName(hostname).
-    
-    public String InetSocketAddress()throws IOException {
-        return ip;
-    }
-    
+
     public void startServer() {
         try {
-            this.server = HttpServer.create(new InetSocketAddress(ip,port), 0);
+            this.server = HttpServer.create(new InetSocketAddress(port), 0);
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -316,8 +297,6 @@ public class WebServer{
         outputStream.close();
         exchange.close();
     }
-    //new InetSocketAddress(String hostname, int port) calls InetAddress.getByName(hostname).
-    
 }
 
 
@@ -352,3 +331,4 @@ class Archivo
       return null;
     }
 }
+
